@@ -122,7 +122,9 @@ nav .menu a {
     vertical-align: middle;
 }
 
-#about, #skills, #resume {
+#about,
+#skills,
+#resume {
     padding-top: 130px;
 }
 
@@ -257,11 +259,96 @@ footer .footer-container {
     margin-right: 24px;
 }
 
-.footer-container form input[type="text"], .footer-container form textarea {
+.footer-container form input[type="text"],
+.footer-container form textarea {
     width: 461px;
     padding: 18px 31px;
     margin-bottom: 24px;
     border: none;
     border-radius: 5px;
     color: #757575;
+}
+
+.hide {
+    display: none;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+
+    .section-heading h2 {
+    font-size: 30px;
+}
+
+    #about,
+    #skills,
+    #resume {
+        padding-top: 60px;
+    }
+
+    #skills .skills-container {
+        width: 70%;
+    }
+
+    .skill-card img {
+        margin-bottom: 10px;
+    }
+
+    .skill-card h3 {
+        margin-bottom: 10px;
+    }
+
+    #skills .skills-container .skill-box {
+        flex-direction: column;
+    }
+
+    .skill-box .skill-card {
+        max-width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .skill-box .skill-card img {
+        border-radius: 5px;
+    }
+
+    /* skills section end */
+
+    #about .about-container {
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #about .about-container .about-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* about section end */
+
+    footer {
+        margin-top: 50px;
+        padding: 50px 0;
+    }
+
+    footer .footer-container {
+        width: 90%;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .footer-container form input[type="text"], .footer-container form textarea {
+        width: 100%;
+    }
+
+    /* footer section end */
+
+    .resume-container {
+        flex-direction: column;
+    }
 }
